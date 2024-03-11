@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ePxpplpWycxSxoStqCFR+0+8Vac4MaD8mXEBkdoalG3mfDq8P/lUtVPcarGEzG0c5qZ5bKJdnR9E/mj3CHMX7g==",
+  "dgSpecHash": "ZsB5Csz+xK7yJc7qDQc+GjrXVuLDEijwbGOG94FgbkDflsH8C8P2N5lhaIiTCcbuYzl/jv1f2SvrRKIlPI3VyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\SnipeDefender-BackEnd\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.2\\microsoft.entityframeworkcore.8.0.2.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.2\\microsoft.entityframeworkcore.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.2\\microsoft.entityframeworkcore.analyzers.8.0.2.nupkg.sha512",

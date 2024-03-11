@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "m7tKnqVIfzOorZpV1yg83u952bp7qOAqAU5OjGGQtguENlcRbsTpg6SDVVvArAa//xnQRBb1EqbN5a4ytq8dJA==",
+  "dgSpecHash": "6ekx2tt6edUoh5V+ZIWstwbwfmGZeUFNqyGvNsYSRPoAye22RNEYMvPoWXZxTme+dSuWqRMHdgSqP60Maw2aTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\SnipeDefender-BackEnd\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

@@ -22,12 +22,42 @@ namespace Presentation.Controllers
             try
             {
                 await _userService.CreateUser(user);
-                return Ok("Kullanıcı başarıyla oluşturuldu");
+                return Ok("User successfully created");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"İç sunucu hatası: {ex.Message}");
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser([FromBody] User user)
+        {
+            try
+            {
+                await _userService.UpdateUser(user);
+                return Ok("User successfully updated");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            try
+            {
+                var userToDelete = await _userService.GetUserById(id);
+                await _userService.DeleteUser(userToDelete);
+                return Ok("User successfully deleted");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
     }
 }

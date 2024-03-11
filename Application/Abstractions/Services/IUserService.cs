@@ -10,5 +10,8 @@ namespace Application.Abstractions.Services
     public interface IUserService
     {
         Task CreateUser(User user);
+        Task UpdateUser(User user);
+        Task DeleteUser(User user);
+        Task<User> GetUserById(int userId);
     }
 }
