@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Domain.Entities
 {
@@ -18,6 +19,7 @@ namespace Domain.Entities
         public string? Hours { get; set; }
         public string? Discord { get; set; }
         public string? SteamPicture { get; set; }
-        public int Reputation { get; set; }
+
+        public ICollection<Comment>? Comments { get; set; }
     }
 }

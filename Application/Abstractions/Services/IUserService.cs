@@ -13,5 +13,7 @@ namespace Application.Abstractions.Services
         Task UpdateUser(User user);
         Task DeleteUser(User user);
         Task<User> GetUserById(int userId);
+        Task<List<User>> GetUsers();
+        Task<User> GetUserByUsername(string username);
     }
 }

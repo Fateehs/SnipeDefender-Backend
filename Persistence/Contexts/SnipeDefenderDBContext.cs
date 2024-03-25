@@ -15,6 +15,8 @@ namespace Persistence.Contexts
         public SnipeDefenderDBContext(DbContextOptions<SnipeDefenderDBContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Player> Players { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

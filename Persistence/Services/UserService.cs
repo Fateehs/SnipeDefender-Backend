@@ -1,5 +1,6 @@
 ﻿using Application.Abstractions.Services;
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
 
 public class UserService : IUserService
@@ -33,7 +34,6 @@ public class UserService : IUserService
         existingUser.Hours = user.Hours;
         existingUser.Discord = user.Discord;
         existingUser.SteamPicture = user.SteamPicture;
-        existingUser.Reputation = user.Reputation;
 
         await _dbContext.SaveChangesAsync();
     }
@@ -61,5 +61,15 @@ public class UserService : IUserService
         }
 
         return user;
+    }
+
+    public async Task<List<User>> GetUsers()
+    {
+        return await _dbContext.Users.ToListAsync();
+    }
+
+    public async Task<User> GetUserByUsername(string username)
+    {
+        return await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == username);
     }
 }
