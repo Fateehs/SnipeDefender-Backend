@@ -10,5 +10,6 @@ namespace Application.Abstractions.Services
     public interface ITokenService
     {
         public Task<GenerateTokenResponse> GenerateToken(GenerateTokenRequest request);
+        public Task<bool> ValidateTokenAsync(string token);
     }
 }

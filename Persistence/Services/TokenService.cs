@@ -45,5 +45,33 @@ namespace Persistence.Services
                 TokenExpireDate = dateTimeNow.Add(TimeSpan.FromMinutes(500))
             });
         }
+
+        public Task<bool> ValidateTokenAsync(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(configuration["JwtSettings:Key"]);
+
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = true,
+                ValidIssuer = configuration["JwtSettings:Issuer"],
+                ValidateAudience = true,
+                ValidAudience = configuration["JwtSettings:Audience"],
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.Zero
+            };
+
+            try
+            {
+                var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out _);
+                return Task.FromResult(true);
+            }
+            catch
+            {
+                return Task.FromResult(false);
+            }
+        }
     }
 }
